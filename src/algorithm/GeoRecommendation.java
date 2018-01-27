@@ -31,7 +31,7 @@ public class GeoRecommendation {
 
 		Set<Item> recommendedItems = new HashSet<>();  // step 3
 		for (String category : allCategories) {
-			List<Item> items = conn.searchItems(userId, lat, lon, category);  // call external API
+			List<Item> items = conn.searchItems(lat, lon, category);  // call external API
 			recommendedItems.addAll(items);
 		}
 

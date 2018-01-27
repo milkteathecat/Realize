@@ -174,7 +174,7 @@ public class MySQLConnection implements DBConnection {
 	}
 
 	@Override
-	public List<Item> searchItems(String userId, double lat, double lon, String term) {
+	public List<Item> searchItems(double lat, double lon, String term) {
 		// Connect to external API
 		ExternalAPI api = ExternalAPIFactory.getExternalAPI(); // moved here
 		List<Item> items = api.search(lat, lon, term);

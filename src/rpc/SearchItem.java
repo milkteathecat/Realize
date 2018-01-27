@@ -49,7 +49,7 @@ public class SearchItem extends HttpServlet {
 		String term = request.getParameter("term"); // Term can be empty or null.
 		
 		DBConnection conn = DBConnectionFactory.getDBConnection();
-		List<Item> items = conn.searchItems(userId, lat, lon, term);
+		List<Item> items = conn.searchItems(lat, lon, term);
 		List<JSONObject> list = new ArrayList<>();
 
 		Set<String> favorite = conn.getFavoriteItemIds(userId);
